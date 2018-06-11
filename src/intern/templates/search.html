@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Filter Devices</h1>
+    <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+    </form>
+    <ul>
+    {% for mobile_filter in filter.qs %}
+    <li><a href="/{{ mobile_filter.id}}">{{ mobile_filter.model_name }}</a> - {{ mobile_filter.company_name }}</li>
+    {% endfor %}
+    </ul>
+    
+{% endblock %}

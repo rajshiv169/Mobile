@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>{{instance.model_name}}</h1>
+    <P> Model Name = {{instance.model_name}}<br>
+        Company name = {{instance.company_name}}<br>
+        Price = Rs.{{instance.price}}<br>
+        Os = {{instance.os}}<br>
+        Processor = {{instance.processor}}<br>
+        Data Transfer = {{instance.data_transfer}} MB/s<br>
+        Processor speed = {{instance.processor_speed}}  ghz<br>
+    </P>
+{% endblock %}

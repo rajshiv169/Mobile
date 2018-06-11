@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>List of all devices</h1>
+    {% for obj in object_list %}
+        <a href="/{{obj.id}}">{{obj.model_name}}</a>
+    {% endfor %}
+    
+{% endblock %}
